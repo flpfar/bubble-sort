@@ -16,9 +16,10 @@ def bubble_sort(array)
     unordered_array_size -= 1 # the last item will always be ordered
     ordered ? break : next  # if there were no swaps, the array is ordered - finish loop
   end
-  print array
+
+  return array
 end
 
-#bubble_sort([2, 1, -2, 12, 64, 23, 11, 4, 44])
-#bubble_sort([1, 2, 3, 4, 5, 6, 7])
-#bubble_sort([7, 6, 5, 4, 3, 2, 1])
+print bubble_sort([2, 1, -2, 12, 64, 23, 11, 4, 44])
+#print bubble_sort([1, 2, 3, 4, 5, 6, 7])
+#print bubble_sort([7, 6, 5, 4, 3, 2, 1])
