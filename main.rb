@@ -6,7 +6,16 @@ def bubble_sort(array)
     index = 0
 
     while index < unordered_array_size - 1
-      if array[index] > array [index + 1]
+      value1 = array[index]
+      value2 = array[index + 1]
+      if array[index].is_a?String
+        value1 = array[index].length
+      end
+      if array[index + 1].is_a?String
+        value2 = array[index + 1].length
+      end
+
+      if value1 > value2
         array[index], array[index + 1] = array[index + 1], array[index]
         ordered = false
       end
@@ -20,6 +29,5 @@ def bubble_sort(array)
   return array
 end
 
-print bubble_sort([2, 1, -2, 12, 64, 23, 11, 4, 44])
-#print bubble_sort([1, 2, 3, 4, 5, 6, 7])
-#print bubble_sort([7, 6, 5, 4, 3, 2, 1])
+print bubble_sort([2, 1, -2, "vluea", "a", 64, 23, 11, 4, 44])
+
