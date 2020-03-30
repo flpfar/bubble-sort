@@ -22,7 +22,7 @@ def bubble_sort_by(array)
     ordered = true
     index = 0
     while index < unordered_array_size - 1
-      if yield(array[index], array[index + 1]) > 0
+      if yield(array[index], array[index + 1]).positive?
         array[index], array[index + 1] = array[index + 1], array[index]
         ordered = false
       end
