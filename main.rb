@@ -33,11 +33,3 @@ def bubble_sort_by(array)
   end
   array
 end
-
-result = bubble_sort_by(%w[hi hello hey]) do |left, right|
-  left.length - right.length
-end
-
-puts bubble_sort([2, 1, -2, 64, 23, 11, 4, 44]).inspect
-
-puts result.inspect
